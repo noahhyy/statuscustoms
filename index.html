@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZC Customs Status</title>
+<style>
+/* General */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f5f7;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* Main container */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Section styling */
+section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Service list */
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Status indicators */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.status.online span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #28a745;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Custom green check icon inside circle */
+.status.online span::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Status text */
+.status.online .text {
+    color: #28a745;
+}
+
+/* Incidents list */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    header h1{ font-size: 2em; }
+    .service { flex-direction: column; align-items: flex-start; gap: 5px; }
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>ZC Customs Status</h1>
+</header>
+
+<main>
+<!-- Current Status Section -->
+<section>
+    <h2>Current Status</h2>
+    <div class="service">
+        <div class="service-name">Website</div>
+        <div class="status online">
+            <span></span>
+            <div class="text">Online</div>
+        </div>
+    </div>
+    <div class="service">
+        <div class="service-name">Discord Bot</div>
+        <div class="status online">
+            <span></span>
+            <div class="text">Online</div>
+        </div>
+    </div>
+    <div class="service">
+        <div class="service-name">ELS Livery Server</div>
+        <div class="status online">
+            <span></span>
+            <div class="text">Online</div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Incidents -->
+<section>
+    <h2>Recent Incidents</h2>
+    <ul>
+        <li>No incidents reported.</li>
+    </ul>
+</section>
+</main>
+
+<footer>
+&copy; 2025 ZC Customs. All rights reserved.
+</footer>
+</body>
+</html>
